@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waflelandia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Waflelandia</h1>
+    <p>¡Bienvenido al paraíso de los wafles!</p>
+  </header>
+
+  <section>
+    <h2>Tipos de Wafles</h2>
+    <div class="wafle">
+      <img src="imagenes/w1.jpeg" alt=""/>
+      <p>Waflebites</p>
+      <p class="ingredients">Mini wafles con chocolate, frutilla y crema batida</p>
+    </div>
+    <div class="wafle">
+      <img src="imagenes/w3ghetis.jpeg" alt="" onclick="flipIngredients(this)">
+      <p>Waflecito</p>
+      <p class="ingredients">Wafle clásico con miel y nueces caramelizadas</p>
+    </div>
+    <div class="wafle">
+      <img src="imagenes/w5 b.jpeg" alt="" onclick="flipIngredients(this)">
+      <p>Waflemaximus</p>
+      <p class="ingredients">Wafle XL con nutella, plátano y crema chantilly</p>
+    </div>
+    <div class="wafle">
+      <img src="imagenes/w4 m.jpeg" alt="" onclick="flipIngredients(this)">
+      <p>Wafleghuettis</p>
+      <p class="ingredients">Wafle relleno de frambuesa con glaseado de vainilla</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Salsas Disponibles</h2>
+    <ul class="menu-list">
+      <li>Chocolate</li>
+      <li>Frutilla</li>
+      <li>Caramelo</li>
+      <li>Manjar</li>
+    </ul>
+
+    <h2>Topings Disponibles</h2>
+    <ul class="menu-list">
+      <li>Chips de chocolate</li>
+      <li>Frutas frescas</li>
+      <li>Crema batida</li>
+      <li>Galletas trituradas</li>
+    </ul>
+  </section>
+
+  <section class="menu-extra">
+    <h2>Arma tu Wafle</h2>
+    <label for="base">Base:</label>
+    <select id="base">
+      <option>Clásico</option>
+      <option>Chocolate</option>
+      <option>Vainilla</option>
+    </select>
+
+    <label for="salsa">Salsa:</label>
+    <select id="salsa">
+      <option>Chocolate</option>
+      <option>Caramelo</option>
+      <option>Frutilla</option>
+      <option>Manjar</option>
+    </select>
+
+    <label for="toping">Toping:</label>
+    <select id="toping">
+      <option>Frutilla</option>
+      <option>Crema</option>
+      <option>Chispas</option>
+      <option>Galletas</option>
+    </select>
+  </section>
+
+  <section>
+    <h2>Sobre Nosotros</h2>
+    <p>¡Bienvenido a Waflelandia! Aquí vivimos para endulzar tu día con los mejores wafles del universo. Cada creación es única y preparada con amor.</p>
+    <p>📍 Dirección: Calle OCEANO ARTICO 123, Ciudad Sabor</p>
+    <p>📞 Contacto: +56 9 34401563</p>
+    <p>📧 Email: contacto@waflelandia.cl</p>
+    <p>🕒 Reserva tu mesa en: <a href="mailto:reserva@waflelandia.cl">reserva@waflelandia.cl</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Waflelandia. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function flipIngredients(imgElement) {
+      const text = imgElement.nextElementSibling.nextElementSibling;
+      text.style.display = text.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
